@@ -1,0 +1,42 @@
+/* Aplicar fonte monospace como principal */
+body {
+    font-family: 'JetBrains Mono', 'Courier New', 'Courier', monospace;
+    font-weight: 400;
+}
+
+/* Para títulos, usar a mesma fonte monospace */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', 'Courier New', 'Courier', monospace;
+    font-weight: 600;
+}
+
+/* Para elementos específicos que precisam de fonte diferente */
+.nav-link, .order-btn, .submit-btn {
+    font-family: 'JetBrains Mono', 'Courier New', 'Courier', monospace;
+}
+
+/* Ajustar espaçamento para fonte monospace */
+body {
+    letter-spacing: -0.02em;
+}
+
+/* Ajustar tamanhos de fonte para melhor legibilidade com monospace */
+.hero-title {
+    font-size: 2.8rem;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+}
+
+.menu-header h2 {
+    font-size: 2.3rem;
+}
+
+.reservations-header h2 {
+    font-size: 2.3rem;
+}
+
+.location-content h2 {
+    font-size: 2.3rem;
+}
