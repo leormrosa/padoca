@@ -138,7 +138,7 @@ body {
 }
 
 .hero-content {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .hero-title {
@@ -161,7 +161,7 @@ body {
 }
 
 .hero-image img {
-    width: 75%;
+    width: auto;
     height: auto;
     border-radius: 8px;
 }
@@ -175,7 +175,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .hours-text {
@@ -196,8 +196,7 @@ body {
 
 .contact-info {
     text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .nav-links-bottom {
@@ -222,6 +221,7 @@ body {
 }
 
 .phone {
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -278,11 +278,18 @@ body {
 }
 
 .menu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
     background: #fff;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item > div:not(.menu-item-img) {
+    width: 100%;
 }
 
 .menu-item:hover {
@@ -293,8 +300,9 @@ body {
 .item-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
+    width: 100%;
 }
 
 .item-header h4 {
@@ -333,27 +341,59 @@ body {
     transform: translateY(-2px);
 }
 
+.menu-item-img {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    background: #f3f3f3;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Chef Section */
 .chef {
     background: #fff;
 }
 
 .chef-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    gap: 2rem;
     align-items: center;
-    margin-bottom: 4rem;
+    flex-direction: column;
 }
 
 .chef-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: #000;
+    font-weight: 900;
+    width: 70%;
+    text-align: left;
+    margin-left: 15%;
+    margin-right: auto;
+    margin-bottom: 8rem;
+}
+
+.chef-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
 }
 
 .chef-image img {
     width: 100%;
+    max-width: 1200px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -365,19 +405,25 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.story-header {
+    text-align: center;
 }
 
 .story-header h4 {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #666;
-    margin-bottom: 0.5rem;
+    color: #000;
+    margin-bottom: 1rem;
 }
 
 .story-header h3 {
     font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .year {
@@ -389,13 +435,15 @@ body {
 .story-text p {
     margin-bottom: 1rem;
     line-height: 1.7;
-    color: #333;
+    font-weight: 700;
+    color: #000;
 }
 
 .story-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    margin-bottom: 6rem;
 }
 
 .story-images img {
@@ -410,127 +458,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Reservations Section */
-.reservations {
-    background: #fafafa;
-}
 
-.reservations-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.reservations-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.phone-large {
-    margin-bottom: 2rem;
-}
-
-.phone-large a {
-    font-size: 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: #000;
-}
-
-.reservation-info {
-    max-width: 600px;
-    margin: 0 auto 3rem;
-}
-
-.reservation-info p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-.reservation-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.form-group {
-    margin-bottom: 2rem;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #000;
-}
-
-.name-fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.input-group label {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #666;
-}
-
-.form-info {
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 0.5rem;
-    font-style: italic;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-select,
-textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #000;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.submit-btn {
-    width: 100%;
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: #333;
-    transform: translateY(-2px);
-}
 
 /* Location Section */
 .location {
